@@ -3,6 +3,8 @@
 Projeto React feito na aula de Programação Web do Unilavras, com os cinco exercícios
 do primeiro contato com componentes.
 
+Online: https://atividade-ciclo-2.vercel.app
+
 ## Rodando o projeto
 
 ```bash
@@ -31,4 +33,4 @@ Todos os componentes são importados e renderizados no `src/main.jsx`.
 
 ## Tecnologias
 
-React 19 + Vite.
+React 19 + Vite, publicado na Vercel.
