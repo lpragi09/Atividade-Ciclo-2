@@ -6,7 +6,7 @@ export default function Rodape() {
     <footer className="rodape">
       <div className="rodapeGrade">
         <div className="rodapeMarca">
-          <span className="marcaIcone">R</span>
+          <span className="marcaIcone">A</span>
           <p>
             Loja fictícia criada para a atividade do ciclo 2, na disciplina de Programação Web
             do Unilavras.
@@ -34,12 +34,12 @@ export default function Rodape() {
           <h4>Contato</h4>
           <a href="#/">Lavras - MG</a>
           <a href="#/">(35) 99999-0000</a>
-          <a href="#/">contato@ragistore.com</a>
+          <a href="#/">contato@atividadestore.com</a>
         </div>
       </div>
 
       <div className="rodapeFinal">
-        <span>© 2026 Ragi Store · Projeto acadêmico</span>
+        <span>© 2026 Atividade Store · Projeto acadêmico</span>
         <span>Feito com React e Vite</span>
       </div>
     </footer>

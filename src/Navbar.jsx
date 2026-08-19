@@ -10,12 +10,12 @@ export default function Navbar(props) {
         <a
           className="marca"
           href="#/"
-          aria-label="Ragi Store, ir para a página inicial"
+          aria-label="Atividade Store, ir para a página inicial"
           onClick={() => setMenuAberto(false)}
         >
-          <span className="marcaIcone">R</span>
+          <span className="marcaIcone">A</span>
           <span className="marcaTexto">
-            Ragi <strong>Store</strong>
+            Atividade <strong>Store</strong>
           </span>
         </a>
 

@@ -11,7 +11,9 @@ export default function SobreLoja(props) {
         <div className="perfilLoja">
           <div className="perfilFoto">👨‍💻</div>
           <Perfil />
-          <p className="perfilCargo">Fundador da Ragi Store · estudante de Sistemas de Informação</p>
+          <p className="perfilCargo">
+            Fundadores da Atividade Store · estudantes de Sistemas de Informação
+          </p>
         </div>
       </section>
 
@@ -20,7 +22,7 @@ export default function SobreLoja(props) {
           <div>
             <h2>Como a loja começou</h2>
             <p>
-              A Ragi Store nasceu de uma bancada de montagem improvisada no quarto, em Lavras.
+              A Atividade Store nasceu de uma bancada de montagem improvisada no quarto, em Lavras.
               Eram só amigos pedindo ajuda para escolher peça de computador sem cair em
               propaganda enganosa. Quando a fila de pedidos passou de dez por semana, virou loja.
             </p>

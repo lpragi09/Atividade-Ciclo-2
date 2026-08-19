@@ -1,7 +1,7 @@
 # Atividade-Ciclo-2
 
 Projeto React feito na aula de Programação Web do Unilavras. Os cinco exercícios da
-atividade viraram uma loja fictícia, a Ragi Store, com navegação própria e carrinho.
+atividade viraram uma loja fictícia, a Atividade Store, com navegação própria e carrinho.
 
 Online: https://atividade-ciclo-2.vercel.app
 
