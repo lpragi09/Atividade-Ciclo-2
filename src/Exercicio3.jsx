@@ -15,11 +15,17 @@ function InfoUsuario(props) {
 
 export default function CardUsuario(props) {
   return (
-    <div className="usuario">
-      <Avatar url={props.usuario.avatarUrl} />
-      <div className="usuarioInfo">
-        <InfoUsuario nome={props.usuario.nome} email={props.usuario.email} />
-      </div>
-    </div>
+    <article className="usuario">
+      <header className="usuarioTopo">
+        <Avatar url={props.usuario.avatarUrl} />
+        <div className="usuarioInfo">
+          <InfoUsuario nome={props.usuario.nome} email={props.usuario.email} />
+        </div>
+      </header>
+
+      <span className="estrelas">{'★'.repeat(props.usuario.nota)}</span>
+      <p className="usuarioComentario">{props.usuario.comentario}</p>
+      <span className="usuarioCompra">Comprou: {props.usuario.comprou}</span>
+    </article>
   );
 }
