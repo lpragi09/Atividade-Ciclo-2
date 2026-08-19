@@ -5,5 +5,5 @@ export default function ListaDeCompras(props) {
     <li key={index}>{item}</li>
   ));
 
-  return <ul>{listaItens}</ul>;
+  return <ul className="lista">{listaItens}</ul>;
 }

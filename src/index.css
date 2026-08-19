@@ -1,15 +1,258 @@
+:root {
+  --fundo: #0b0d12;
+  --cartao: #12151d;
+  --borda: rgba(255, 255, 255, 0.08);
+  --texto: #e7e9ef;
+  --apagado: #9aa3b2;
+  --roxo: #8b5cf6;
+  --ciano: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: system-ui, Arial, sans-serif;
-  margin: 40px;
-  line-height: 1.5;
+  margin: 0;
+  min-height: 100vh;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: Inter, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-  margin-bottom: 0;
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60rem 40rem at 15% -10%, rgba(139, 92, 246, 0.22), transparent 60%),
+    radial-gradient(45rem 35rem at 95% 5%, rgba(34, 211, 238, 0.16), transparent 60%);
 }
 
-button {
-  padding: 8px 16px;
+.pagina {
+  position: relative;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 88px 24px 64px;
+}
+
+/* Cabeçalho com a Atividade 1 */
+.topo {
+  text-align: center;
+  margin-bottom: 72px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--apagado);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nome {
+  margin: 20px 0 4px;
+  font-size: clamp(2.6rem, 8vw, 4.4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  background: linear-gradient(100deg, #fff 20%, var(--roxo) 60%, var(--ciano));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.cidade {
+  margin: 0;
+  color: var(--apagado);
+  font-size: 1.05rem;
+}
+
+/* Grade de atividades */
+.grade {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cartao {
+  padding: 28px;
+  border: 1px solid var(--borda);
+  border-radius: 18px;
+  background: linear-gradient(180deg, var(--cartao), rgba(18, 21, 29, 0.6));
+  transition: border-color 0.25s, transform 0.25s;
+}
+
+.cartao:hover {
+  border-color: rgba(139, 92, 246, 0.45);
+  transform: translateY(-3px);
+}
+
+.cartao:first-child {
+  grid-column: 1 / -1;
+}
+
+.numero {
+  display: block;
+  color: var(--ciano);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.tituloCartao {
+  margin: 8px 0 22px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.dica {
+  margin: -12px 0 20px;
+  color: var(--apagado);
+  font-size: 0.9rem;
+}
+
+/* Atividade 2 */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.produto {
+  padding: 20px;
+  border: 1px solid var(--borda);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.produto h2 {
+  margin: 0 0 6px;
   font-size: 1rem;
+  font-weight: 600;
+}
+
+.produto p {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  background: linear-gradient(100deg, var(--roxo), var(--ciano));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Atividade 3 */
+.usuario {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: rgba(255, 255, 255, 0.06);
+  outline: 2px solid rgba(139, 92, 246, 0.5);
+  outline-offset: 3px;
+}
+
+.usuarioInfo h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.usuarioInfo p {
+  margin: 2px 0 0;
+  color: var(--apagado);
+  font-size: 0.92rem;
+}
+
+/* Atividade 4 */
+.botao {
+  padding: 12px 26px;
+  border: 0;
+  border-radius: 12px;
+  background: linear-gradient(100deg, var(--roxo), var(--ciano));
+  color: #0b0d12;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
   cursor: pointer;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.botao:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+.botao:active {
+  transform: translateY(0);
+}
+
+/* Atividade 5 */
+.lista {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--borda);
+}
+
+.lista li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.lista li::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(100deg, var(--roxo), var(--ciano));
+}
+
+.rodape {
+  margin-top: 64px;
+  color: var(--apagado);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+@media (max-width: 720px) {
+  .pagina {
+    padding: 56px 18px 48px;
+  }
+
+  .grade {
+    grid-template-columns: 1fr;
+  }
+
+  .topo {
+    margin-bottom: 48px;
+  }
+
+  .cartao {
+    padding: 22px;
+  }
 }

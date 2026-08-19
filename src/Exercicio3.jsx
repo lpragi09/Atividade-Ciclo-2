@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Avatar(props) {
-  return <img src={props.url} alt="Avatar" width={50} />;
+  return <img className="avatar" src={props.url} alt="Avatar" width={50} />;
 }
 
 function InfoUsuario(props) {
@@ -15,9 +15,11 @@ function InfoUsuario(props) {
 
 export default function CardUsuario(props) {
   return (
-    <div>
+    <div className="usuario">
       <Avatar url={props.usuario.avatarUrl} />
-      <InfoUsuario nome={props.usuario.nome} email={props.usuario.email} />
+      <div className="usuarioInfo">
+        <InfoUsuario nome={props.usuario.nome} email={props.usuario.email} />
+      </div>
     </div>
   );
 }

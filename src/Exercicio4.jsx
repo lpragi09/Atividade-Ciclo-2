@@ -5,5 +5,9 @@ export default function BotaoDownload() {
     console.log('Iniciando download...');
   }
 
-  return <button onClick={lidarComClique}>Baixar Relatório</button>;
+  return (
+    <button className="botao" onClick={lidarComClique}>
+      Baixar Relatório
+    </button>
+  );
 }
