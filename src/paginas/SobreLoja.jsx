@@ -12,7 +12,7 @@ export default function SobreLoja(props) {
           <div className="perfilFoto">👨‍💻</div>
           <Perfil />
           <p className="perfilCargo">
-            Fundadores da Atividade Store · estudantes de Sistemas de Informação
+            Fundadores da Atividade Store · estudantes de Análise e Desenvolvimento de Sistemas
           </p>
         </div>
       </section>
